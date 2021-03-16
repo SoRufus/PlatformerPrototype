@@ -9,12 +9,11 @@ public class SpawnManager : Singleton<SpawnManager>
     [SerializeField] private Transform spawnPoint;
     private void Awake()
     {
-      PlayerController.Instance.OnPlayerDeath += PlayerDeath;
+      PlayerController.Instance.OnPlayerDeath += RespawnPlayer;
     }
-    public void PlayerDeath()
+    public void RespawnPlayer()
     {
         playerObject.transform.position = spawnPoint.transform.position;
         playerObject.transform.localEulerAngles = Vector3.zero;
-        CharacterController2D.Instance.m_Rigidbody2D.velocity = Vector3.zero;
     }
 }

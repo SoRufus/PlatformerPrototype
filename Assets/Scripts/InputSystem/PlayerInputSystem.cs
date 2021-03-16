@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class PlayerInputSystem : Singleton<PlayerInputSystem>
 {
     private PlayerInputAction inputAction;
-
     public float moveValue;
 
     public UnityAction OnJumpAction;

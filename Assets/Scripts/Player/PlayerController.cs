@@ -9,7 +9,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public void SetPlayerDeath()
     {
-
+        //Particles and other stuff
         OnPlayerDeath?.Invoke();
     }
 }
